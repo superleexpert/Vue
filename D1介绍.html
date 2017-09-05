@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue测试</title>
+    <script src="vue.js"></script>
+    <script>
+        window.onload = function () {
+            var c = new Vue({
+                el:'#box', // 放的是选择器
+                data:{
+                    msg:'welcome vue'
+                }
+            });
+
+            new Vue({
+                el:'.box1',
+                data:{
+                    msg:'welcome v-m',
+                    msg2:12,
+                    arr:['asd', 'vvv', 'lll', 'ppp', 'uuu']
+                }
+            });
+
+            new Vue({
+                el:'body',
+                data:{
+                    msg2:12,
+                    arr:['asd', 'vvv', 'lll', 'ppp', 'uuu']
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+<div id="box">
+    {{msg}}
+</div>
+<br>
+<div class="box1">
+    <input type="text" v-model="msg">
+    <input type="text" v-model="msg">
+</div>
+<br>
+<div>
+    {{msg2}}
+    <br>
+    {{arr}}
+</div>
+</body>
+</html>

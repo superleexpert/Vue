@@ -1,0 +1,17 @@
+官网：https://cn.vuejs.org/
+手册：https://cn.vuejs.org/v2/api/
+
+和angular的区别：
+vue：简单、轻量、小巧
+指令以v-xxx
+一片html代码配合上json，在new出来vue实例
+个人维护项目
+
+angular：相对上手难
+指令以ng-xxx
+所有属性和方法都挂到$scope身上
+由Google维护
+1更适合pc端项目
+
+共同点：不兼容低版本IE
+
