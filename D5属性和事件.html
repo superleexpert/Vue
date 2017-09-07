@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性事件</title>
+    <script src="vue2.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el: '#box',
+                data:{
+                    arr:['aa','vv','dd','pear']
+                },
+                methods:{
+                    show:function(ev) {
+                        alert(ev.clientX);
+                    }
+                }
+            })cx-5
+        };
+    </script>
+</head>
+<body>
+    <div id="box">
+        <input type="button" value="按钮一个" @click="show($event)">
+    </div>
+</body>
+</html>
