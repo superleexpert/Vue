@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <message title = 'i am aTitle' content = 'helllllllo world'></message>
+</div>
+
+<script type="text/javascript">
+    // var Message = Vue.extend({
+    //     props: ['title', 'content'],
+    //     template: '<h1>{{title}}</h1><h2>{{content}}</h2>'
+    // })
+    // Vue.component('message', Message);
+
+    var myComponent = Vue.component('message', {
+        props: ['title', 'content'],
+        template: '<h1>{{title}}</h1><h2>{{content}}</h2>'
+    })
+
+    var   vm = new Vue({
+        el: '#app'
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="node_modules/vue/dist/vue.min.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <p>123啊啊啊</p>
+</div>
+<!--x-template 不被显示，不被解析，只是在加载完成后待模板引擎用来渲染用的-->
+<script id="tpl" type="text/x-template">
+    <div class="tpl">
+        <p>this is a tpl from script tag</p>
+    </div>
+</script>
+
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#app',
+        template: '#tpl'
+    })
+</script>
+</body>
+</html>
