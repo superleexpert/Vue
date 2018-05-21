@@ -1,0 +1,19 @@
+vue init webpack Travel
+
+? Target directory exists. Continue? (Y/n) (node:90459) ExperimentalWarning: The fs.promises API is experimental
+? Target directory exists. Continue? Yes
+? Project name travel
+? Project description qunawang app
+? Author Allen Lee
+? Vue build standalone
+? Install vue-router? Yes
+? Use ESLint to lint your code? Yes
+? Pick an ESLint preset Standard
+? Set up unit tests No
+? Setup e2e tests with Nightwatch? No
+? Should we run `npm install` for you after the project has been created? (recommended) npm
+
+// --
+save时权限问题可在get info里设置控制权限
+.vue：单文件组件
+路由是根据网址的不同返回不同页面

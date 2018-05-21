@@ -10,6 +10,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  // router: router等价于
   components: { App },
   template: '<App/>'
 })
