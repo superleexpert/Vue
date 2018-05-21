@@ -1,0 +1,15 @@
+npm -v
+node -v
+sudo -s
+npm install webpack -g
+npm install -g @vue/cli
+vue init webpack todolist
+
+success:
+todolist文件夹：
+build:webpack配置文件
+config：开发和线上环境配置文件
+node_modules：项目依赖
+src：源代码
+static：静态资源
+
