@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld' // @是src目录
 import Home from '@/pages/home/Home'
-import List from '@/pages/list/List'
+// import List from '@/pages/list/List'
 
 Vue.use(Router)
 
@@ -22,10 +22,11 @@ export default new Router({
       path: '/', // 访问根路径
       name: 'Home',
       component: Home
-    }, {
-      path: '/list',
-      name: 'List',
-      component: List
     }
+    // , {
+    //   path: '/list',
+    //   name: 'List',
+    //   component: List
+    // }
   ]
 })

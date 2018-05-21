@@ -17,3 +17,11 @@ vue init webpack Travel
 save时权限问题可在get info里设置控制权限
 .vue：单文件组件
 路由是根据网址的不同返回不同页面
+vue是单页面，通过JS感知后进行组件的清除和添加渲染
+优点：页面切换快
+缺点：首屏时间稍慢，SEO差
+
+npm install fastclick --save：解决移动端点击事件的300ms延迟问题（在Travel的目录下执行）
+
+
+
