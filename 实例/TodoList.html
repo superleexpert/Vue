@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../Session_1/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <div>
+            <input type="text" v-model="inputValue">
+            <button @click="handleSubmit">提交</button>
+            <!-- <ul>
+                <li v-for="(item, index) in list" :key="index">{{item}}</li>
+            </ul> -->
+        </div>
+        <ul>
+            <!-- content是属性传参 -->
+            <todo-item v-for="(item,index) in list" :key="index" :content="item" :index="index" v-on:delete="handleDelete"> 
+            </todo-item>
+        </ul>
+    </div>
+</body>
+<script>
+    // 全局组件，每一个组件是一个vue的实例
+    // 作为大组件的子组件
+    Vue.component('todo-item', {
+        props: ['content'], // 接受外部传递的content属性
+        template: '<li @click="handleClick">{{content}}</li>',
+        methods: {
+            handleClick: function(){
+                // alert('click' + this);
+                this.$emit('delete', this.index);
+            }
+        }
+    })
+
+    // var ToduItem = {
+    //     template: '<li>item2<li>'
+    // }
+
+    // 没有声明template的话，会去el找对象的标签作为模板
+    // 最外层实例，大组件
+    new Vue({
+        el: "#root",
+        data: {
+            inputValue: "",
+            list: []
+        },
+        methods: {
+            handleSubmit: function(){
+                this.list.push(this.inputValue);
+                this.inputValue = '';
+            },
+            handleDelete: function(index){
+                // alert('delete' + index);
+                this.list.splice(index, 1);
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../Session_1/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <div v-bind:title="title">hello world</div>
+        <div title="thaksdkasdjkasjkd">13332392389238</div>
+        <hr>
+        <!-- 单向绑定 -->
+        <!-- <input type="text" v-bind:value="content"> -->
+        <!-- 双向绑定 -->
+        <input type="text" v-model:value="content">
+
+        <div>{{content}}</div>
+    </div>
+    <hr>
+    <div id="propty">
+        姓<input type="text" v-model="firstName">
+        名<input type="text" v-model="lastName">
+        <div>{{fullName}}</div>
+        <div>{{count}}</div>
+    </div>
+    <script>
+        new Vue({
+            el: "#root",
+            data: {
+                title: "this is helle world",
+                content: "this is content"
+            }
+        })
+
+        new Vue({
+            el: "#propty",
+            data () {
+                return {
+                    firstName: '',
+                    lastName: '',
+                    count: 0
+                }
+            },
+            computed: {
+                fullName: function(){
+                    return this.firstName + ' ' + this.lastName;
+                }
+            },
+            watch: {
+                // firstName: function(){
+                //     this.count ++;
+                // },
+                // lastName: function(){
+                //     this.count ++;
+                // }
+                fullName: function(){
+                    this.count ++;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

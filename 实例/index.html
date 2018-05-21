@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue入门</title>
+    <script src="../Session_1/vue.js"></script>
+</head>
+<body>
+    <!-- <dir id="root">hello world</dir> -->
+    <div id="root">
+        <h1>I am a {{msg}}</h1>
+        <!-- <h1>{{number}}</h1> -->
+        <!-- <h2 v-text="number"></h2> -->
+        <!-- 不会转义 -->
+        <!-- <h2 v-html="number" v-on:click="handleClick"></h2>  -->
+        <!-- 简写 -->
+        <h2 v-html="number" @click="handleClick"></h2> 
+    </div>
+
+    <script>
+        new Vue({
+            el: "#root", // 挂载点：el属性对应的节点
+            // template: '<h1>I am a {{msg}}</h1>', // 模板
+            data () {
+                return {
+                    msg: "Hello World",
+                    number: 233333
+                }
+            },
+            methods: {
+                handleClick: function(){
+                    // alert(123);
+                    this.number = "322222 update"; // 面向数据编程
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../Session_1/vue.js"></script>
+
+</head>
+<body>
+    <div id="root"> 
+        <!-- v-show相对于if不会移除相应监听标签，只是添加display进行了隐藏 -->
+        <div v-if="show">hello world</div>
+        <button v-on:click="handleClick">toggle</button>
+        <ul>
+            <!-- <li v-for="item in list":key="item">{{item}}</li> -->
+            <li v-for="(item, index) of list" :key="item">{{item}}</li>
+        </ul>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#root",
+        data () {
+            return {
+                show: true,
+                list: [1, 2, 3, 1]
+            }
+        },
+        methods: {
+            handleClick: function(){
+                this.show = !this.show;
+            }
+        }
+    })
+</script>
+</html>
