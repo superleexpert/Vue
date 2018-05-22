@@ -27,4 +27,7 @@ stylus:类似于Less
 npm install stylus --save
 npm install stylus-loader --save
 
+1rem = html font-size = 50px
+x / 100 = .??rem
+
 
