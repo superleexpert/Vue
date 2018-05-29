@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪</div>
     <ul>
-      <li class="item" v-for="(item, index) of recommendList" :key="index">
+      <li class="item" v-for="(item, index) of list" :key="index">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" alt="">
         </div>
@@ -19,31 +19,34 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg',
-        title: '大连海洋世界啊啊啊',
-        desc: '描述拍下哦擦破哦阿杜喵喵喵'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg',
-        title: '大连海洋世界啊啊啊',
-        desc: '描述拍下哦擦破哦阿杜喵喵喵'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_200x200_7690e4cd.jpg',
-        title: '大连海洋世界啊啊啊',
-        desc: '描述拍下哦擦破哦阿杜喵喵喵'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg',
-        title: '大连海洋世界啊啊啊',
-        desc: '描述拍下哦擦破哦阿杜喵喵喵'
-      }]
-    }
+  props: {
+    list: Array
   }
+  // data () {
+  //   return {
+  //     recommendList: [{
+  //       id: '0001',
+  //       imgUrl: 'http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg',
+  //       title: '大连海洋世界啊啊啊',
+  //       desc: '描述拍下哦擦破哦阿杜喵喵喵'
+  //     }, {
+  //       id: '0002',
+  //       imgUrl: 'http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg',
+  //       title: '大连海洋世界啊啊啊',
+  //       desc: '描述拍下哦擦破哦阿杜喵喵喵'
+  //     }, {
+  //       id: '0003',
+  //       imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/a5/4003f9dd7bebf61eccbf64046e26d487.water.jpg_200x200_7690e4cd.jpg',
+  //       title: '大连海洋世界啊啊啊',
+  //       desc: '描述拍下哦擦破哦阿杜喵喵喵'
+  //     }, {
+  //       id: '0004',
+  //       imgUrl: 'http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg',
+  //       title: '大连海洋世界啊啊啊',
+  //       desc: '描述拍下哦擦破哦阿杜喵喵喵'
+  //     }]
+  //   }
+  // }
 }
 </script>
 
@@ -55,11 +58,7 @@ export default {
   .item-img-wrapper
     overflow: hidden
     height :0
-    padding-bottom : 33.9%
-  // .item
-    // display: flex
-    // overflow : hidden
-    // height : 1.9rem
+    padding-bottom : 37.09%
   .item-img
     width: 100%
   .item-info
