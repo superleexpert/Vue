@@ -49,7 +49,6 @@ export default {
 
 <style lang="stylus" scoped>
   .title
-    margin-top : .2rem
     line-height : .8rem
     background : #eee
     text-indent : .2rem
@@ -63,8 +62,6 @@ export default {
     // height : 1.9rem
   .item-img
     width: 100%
-    // height : 1.7rem
-    // padding .1rem
   .item-info
     padding : .1rem
     .item-title

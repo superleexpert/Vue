@@ -32,4 +32,6 @@ x / 100 = .??rem
 
 npm install vue-awesome-swiper@2.6.7 --save
 
+axios:跨平台请求，XHR \ HTTP等
+
 
