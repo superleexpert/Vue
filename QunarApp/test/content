@@ -39,4 +39,6 @@ https://github.com/ustbhuangyi/better-scroll
 
 Vuex:多个组件页面传递、共享数据，单向数据改变流程
 
+keep-alive:防止重复渲染，会在内存中保留
+
 
