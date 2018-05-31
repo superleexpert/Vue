@@ -13,6 +13,7 @@
       </div>
     </div>
     <fade-animation>
+      <!-- 组件的slot就代表common-gallary -->
       <common-gallary
         :imgs="bannerImgs"
         v-show="showGallary"

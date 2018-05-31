@@ -41,7 +41,8 @@ export default{
 </script>
 
 <style lang="stylus" scoped>
-// 样式穿透 不受scoled的限制
+// 样式穿透 不受scoled的限制，wrapper下子组件只要出现swiper-pagination-bullet-active就会相应样式
+// swiper-pagination显示内容是传递给swiper显示的
   .wrapper >>> .swiper-pagination-bullet-active
     background : white !important
     margin-bottom :10px
