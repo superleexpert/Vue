@@ -3,6 +3,7 @@ import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld' // @是src目录
 import Home from '@/pages/home/Home'
 import City from '@/pages/city/City'
+import Detail from '@/pages/detail/Detail'
 // import List from '@/pages/list/List'
 
 Vue.use(Router)
@@ -27,6 +28,10 @@ export default new Router({
       path: '/city',
       name: 'City',
       component: City
+    }, {
+      path: '/detail/:id',
+      name: 'Detail',
+      component: Detail
     }
     // , {
     //   path: '/list',
