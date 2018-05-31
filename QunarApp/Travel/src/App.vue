@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <keep-alive>
+    <!-- 除了Detail页面，其他页面做缓存 -->
+    <keep-alive exclude="Detail">
         <router-view/>
     </keep-alive>
   </div>

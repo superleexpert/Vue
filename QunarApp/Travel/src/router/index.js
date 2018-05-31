@@ -38,5 +38,9 @@ export default new Router({
     //   name: 'List',
     //   component: List
     // }
-  ]
+  ],
+  // 每次做路由切换时回到最顶部
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
